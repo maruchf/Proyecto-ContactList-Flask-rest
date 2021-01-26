@@ -21,12 +21,15 @@ The following steps are automatically runned withing gitpod, if you are doing a 
 
 ```sh
 pipenv install;
-mysql -u root -e "CREATE DATABASE example";
+mysql -u maruchf -p -e "CREATE DATABASE example";
 pipenv run init;
 pipenv run migrate;
 pipenv run upgrade;
 ```
-
+## IF you have password
+```sh
+mysql -u root -p -e "CREATE DATABASE example";
+```
 ## How to Start coding?
 
 There is an example API working with an example database. All your application code should be written inside the `./src/` folder.
