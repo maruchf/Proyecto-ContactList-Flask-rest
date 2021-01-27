@@ -17,11 +17,13 @@
 
 > Important: The boiplerplate is made for python 3.7 but you can easily change the `python_version` on the Pipfile.
 
+
 The following steps are automatically runned withing gitpod, if you are doing a local installation you have to do them manually:
 
 ```sh
 pipenv install;
 mysql -u maruchf -p -e "CREATE DATABASE example";
+#mysql -h localhost -u maruchf -p
 pipenv run init;
 pipenv run migrate;
 pipenv run upgrade;
@@ -75,3 +77,11 @@ $ heroku create <your_application_name>
 $ git push heroku master
 ```
 :warning: For a more detailed explanation on working with .env variables or the MySQL database [read the full guide](https://github.com/4GeeksAcademy/flask-rest-hello/blob/master/docs/DEPLOY_YOUR_APP.md).
+
+
+```
+show databases; 
+use NAME_DATABASE
+show tables;
+describe NAME_TABLE;
+```sh
